@@ -108,7 +108,3 @@ def stripe_webhook():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-'''
-Tutorial link: https://testdriven.io/blog/flask-stripe-tutorial/
-'''
