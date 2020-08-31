@@ -4,7 +4,7 @@ from api.admin_config import ADMIN_PROFILE
 
 
 # create a user model
-class User(db.Model):
+class UserModel(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(320), nullable=False, unique=True)
