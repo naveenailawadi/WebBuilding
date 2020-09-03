@@ -17,7 +17,7 @@ class UserModel(db.Model):
 # create a function to validate users
 def validate_user(email, password):
     # get the user
-    user = User.query.filter_by(email=email).first()
+    user = UserModel.query.filter_by(email=email).first()
 
     if not user:
         return False, {'message': f"no account associated with {email}"}, 404
