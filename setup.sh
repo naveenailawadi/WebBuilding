@@ -12,7 +12,7 @@ curl https://bootstrap.pypa.io/get-pip.py | sudo python3.7
 
 # wsgi
 sudo apt-get install apache2 apache2-dev
-pip3 install mod_wsgi flask flask_restful flask_sqlalchemy flask_cors
+pip3 install -r requirements.txt
 
 # mysql for python
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
