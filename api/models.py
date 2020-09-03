@@ -54,3 +54,8 @@ def object_as_dict(obj):
     # format datetimes
     obj_dict = {key: check_dt(value) for key, value in obj_dict.items()}
     return obj_dict
+
+# create a function that set object attributes to a dict
+def set_object_to_dict(obj, obj_dict):
+    for key, value in obj_dict.items():
+        db.setattr(obj, key, value)
