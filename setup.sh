@@ -16,12 +16,14 @@ pip3 install -r requirements.txt
 
 # mysql for python
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
-pip3 install mysqlclient
 sudo apt-get install python3-pymysql
 
 # setup git hub
 git config user.email "naveen.ailawadi91@gmail.com"
 git config user.name "Naveen Ailawadi"
+
+# add digital ocean metrics
+curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
 
 # full docs: https://pythonprogramming.net/basic-flask-website-tutorial/
 # will need these ^ to set up the manual stuff
