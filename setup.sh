@@ -7,8 +7,8 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 
 # python
-sudo apt-get install python3.7 python3.7-dev
-curl https://bootstrap.pypa.io/get-pip.py | sudo python3.7
+sudo apt-get install python3.8 python3.8-dev
+curl https://bootstrap.pypa.io/get-pip.py | sudo python3.8
 
 # wsgi
 sudo apt-get install apache2 apache2-dev
