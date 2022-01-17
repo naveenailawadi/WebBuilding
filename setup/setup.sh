@@ -7,12 +7,18 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
 
 # python
-sudo apt-get install python3.8 python3.8-dev
-curl https://bootstrap.pypa.io/get-pip.py | sudo python3.8
+sudo apt-get install python3.9 python3.9-dev
+curl https://bootstrap.pypa.io/get-pip.py | sudo python3.9
 
 # wsgi
 sudo apt-get install apache2 apache2-dev
+
+# requirements
 pip3 install -r requirements.txt
+
+# linux only requirements
+pip3 install mod_wsgi
+pip3 install mysqlclient
 
 # mysql for python
 sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
