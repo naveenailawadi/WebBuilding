@@ -1,14 +1,25 @@
 # https://strapi.io/blog/how-to-deploy-a-strapi-application
 
+# enter the main directory
+cd ..
+
+# install nodejs
+sudo apt-get install -y nodejs
+
+# get the node version manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# use npm 14
+nvm install 14
+nvm use 14
+
 # update npx
 npm update npx
 
-# install nodejs
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
 # create a production-level strapi app for the cms
-npx create-strapi-app@latest cms
+npx create-strapi-app@latest cms --quickstart
 
 # install the dependencies
 cd cms
@@ -18,7 +29,7 @@ npm install --production
 cd ..
 
 # install pm2 (globally with -g)
-npm install pm2 -g
+npm install pm2
 
 # start the server
 NODE_ENV=production pm2 start server.js --name cms
