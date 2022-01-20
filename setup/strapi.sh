@@ -1,3 +1,4 @@
+# https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/digitalocean.html
 # https://strapi.io/blog/how-to-deploy-a-strapi-application
 
 # enter the main directory
