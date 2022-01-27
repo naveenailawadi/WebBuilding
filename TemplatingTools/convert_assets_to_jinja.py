@@ -1,4 +1,5 @@
 from Jinjafy import FileConverter
+import platform
 import sys
 
 ATTRIBUTES = [('link', 'href'), ('img', 'src'), ('script', 'src')]
@@ -14,6 +15,6 @@ def convert(filepath):
 
 
 if __name__ == '__main__':
-    filepath = sys.argv[1].strip().replace('\\', '')
+    filepath = sys.argv[1].strip()
 
     convert(filepath)
