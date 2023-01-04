@@ -8,13 +8,14 @@ sudo apt-get update
 
 # python
 sudo apt-get install python3.9 python3.9-dev
-curl https://bootstrap.pypa.io/get-pip.py | sudo python3.9
+apt install python3-pip
 
 # wsgi
 sudo apt-get install apache2 apache2-dev
 
 # requirements
-pip3 install -r requirements.txt
+pip3 install -r requirements/local_requirements.txt
+pip3 install -r requirements/server_requirements.txt
 
 # linux only requirements
 pip3 install mod_wsgi
